@@ -1,5 +1,6 @@
 import time
 import pyperclip
+import datetime
 
 def monitor_clipboard(duration):
     
@@ -20,11 +21,12 @@ def monitor_clipboard(duration):
         # Check the current clipboard content
         current_text = pyperclip.paste()
         # Compare with previous content to find changes
-        if current_text != previous_text:
+        if current_text!= previous_text:
             # Print new text
             
+            timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
             with open('clipboard_monitor.txt', 'a') as file:
-                file.write(current_text+"\n")
+                file.write(f"[{timestamp}] \n{current_text}\n")
                 file.write("-----------------------------------------\n")
             # Update previous_text to current_text
             previous_text = current_text
@@ -33,4 +35,3 @@ def monitor_clipboard(duration):
         time.sleep(1)  # Adjust sleep duration as needed
 
     print("Duration ended. Stopping clipboard monitoring.")
-
