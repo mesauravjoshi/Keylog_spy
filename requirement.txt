@@ -1,0 +1,4 @@
+pip install Pillow --upgrade
+pynput   
+pyperclip
+pyautogui
