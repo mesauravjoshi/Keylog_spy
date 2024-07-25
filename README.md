@@ -18,3 +18,20 @@ Keylog_spy offers real-time keystroke logging and clipboard monitoring capabilit
 
 - Automatically logs any text that is copied to the clipboard.
 - Each clipboard entry is logged with a timestamp to indicate when the text was copied.
+
+
+
+## How to use
+
+###  1. Install Requirements:
+Run the following command in PowerShell or Command Prompt to install the necessary dependencies:
+```bash
+  pip install -r requirement.txt
+``` 
+
+###  2. Run the Application:
+    
+Execute the following command in PowerShell or Command Prompt to start the keylogger:
+```bash
+  python keylogger.py
+```
